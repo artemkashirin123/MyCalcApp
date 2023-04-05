@@ -1,0 +1,74 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="MyCalcApp.MainPage">
+    <Grid Background="#DCDCDC">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="0.15*" />
+            <RowDefinition Height="0.08*" />
+            <RowDefinition Height="0.08*" />
+            <RowDefinition Height="0.08*" />
+            <RowDefinition Height="0.08*" />
+            <RowDefinition Height="0.08*" />
+            <RowDefinition Height="0.08*" />
+            <RowDefinition Height="0.08*" />
+            <RowDefinition Height="0.2*" />
+        </Grid.RowDefinitions>
+
+
+        <StackLayout Grid.Row="0" Orientation="Vertical" HorizontalOptions="End" VerticalOptions="Center" Margin="0,0,25,0">
+            <Label Text="0" FontSize="50" TextColor="Black" x:Name="resultText" />
+        </StackLayout>
+
+        <StackLayout Grid.Row="1" Orientation="Horizontal" HorizontalOptions="Center" VerticalOptions="Center" Margin="0,10">
+            <Label Text="MC" FontSize="20" TextColor="Gray" />
+            <Label Text="MR" FontSize="20" TextColor="Gray" Margin="30,0,30,0"/>
+            <Label Text="M+" FontSize="20" TextColor="Black"/>
+            <Label Text="M-" FontSize="20" TextColor="Black" Margin="30,0,30,0"/>
+            <Label Text="MS" FontSize="20" TextColor="Black" />
+            <Label Text="Mv"  FontSize="20" TextColor="Gray" Margin="30,0,0,0"/>
+        </StackLayout>
+
+        <HorizontalStackLayout Grid.Row="2" HorizontalOptions="Center">
+            <Button WidthRequest="85" HeightRequest="50" FontSize="20" Text="%" TextColor="Black" BackgroundColor="White"/>
+            <Button WidthRequest="85" HeightRequest="50" FontSize="20" Text="CE" TextColor="Black" BackgroundColor="White"/>
+            <Button WidthRequest="85" HeightRequest="50" FontSize="20" Text="C" TextColor="Black" Clicked="ButtonClear_Clicked" BackgroundColor="White"/>
+            <Button WidthRequest="85" HeightRequest="50" FontSize="20" Text="⌫" TextColor="Black" Clicked="ButtonClearOne_Clicked" BackgroundColor="White"/>
+        </HorizontalStackLayout>
+
+        <HorizontalStackLayout Grid.Row="3" HorizontalOptions="Center">
+            <Button WidthRequest="85" HeightRequest="50" FontSize="20" Text="1/x" TextColor="Black" BackgroundColor="White"/>
+            <Button WidthRequest="85" HeightRequest="50" FontSize="20" Text="x^y" TextColor="Black" Clicked="ButtonStepen_Clicked" BackgroundColor="White"/>
+            <Button WidthRequest="85" HeightRequest="50" FontSize="20" Text="2√x" TextColor="Black" BackgroundColor="White"/>
+            <Button WidthRequest="85" HeightRequest="50" FontSize="20" Text="÷" TextColor="Black" Clicked="ButtonDelen_Clicked" BackgroundColor="White"/>
+        </HorizontalStackLayout>
+
+        <HorizontalStackLayout Grid.Row="4" HorizontalOptions="Center">
+            <Button WidthRequest="85" HeightRequest="50" FontSize="20" Text="7" TextColor="Black" Clicked="ButtonSeven_Clicked" BackgroundColor="White"/>
+            <Button WidthRequest="85" HeightRequest="50" FontSize="20" Text="8" TextColor="Black" Clicked="ButtonEight_Clicked" BackgroundColor="White"/>
+            <Button WidthRequest="85" HeightRequest="50" FontSize="20" Text="9" TextColor="Black" Clicked="ButtonNine_Clicked" BackgroundColor="White"/>
+            <Button WidthRequest="85" HeightRequest="50" FontSize="20" Text="×" TextColor="Black"  Clicked="ButtonUmn_Clicked" BackgroundColor="White"/>
+        </HorizontalStackLayout>
+
+        <HorizontalStackLayout Grid.Row="5" HorizontalOptions="Center">
+            <Button WidthRequest="85" HeightRequest="50" FontSize="20" Text="4" TextColor="Black" Clicked="ButtonFour_Clicked" BackgroundColor="White"/>
+            <Button WidthRequest="85" HeightRequest="50" FontSize="20" Text="5" TextColor="Black" Clicked="ButtonFive_Clicked" BackgroundColor="White"/>
+            <Button WidthRequest="85" HeightRequest="50" FontSize="20" Text="6" TextColor="Black" Clicked="ButtonSix_Clicked" BackgroundColor="White"/>
+            <Button WidthRequest="85" HeightRequest="50" FontSize="20" Text="-" TextColor="Black" Clicked="ButtonMinus_Clicked" BackgroundColor="White"/>
+        </HorizontalStackLayout>
+
+        <HorizontalStackLayout Grid.Row="6" HorizontalOptions="Center">
+            <Button WidthRequest="85" HeightRequest="50" FontSize="20" Text="1" TextColor="Black" Clicked="ButtonOne_Clicked" BackgroundColor="White"/>
+            <Button WidthRequest="85" HeightRequest="50" FontSize="20" Text="2" TextColor="Black" Clicked="ButtonTwo_Clicked" BackgroundColor="White"/>
+            <Button WidthRequest="85" HeightRequest="50" FontSize="20" Text="3" TextColor="Black" Clicked="ButtonThree_Clicked" BackgroundColor="White"/>
+            <Button WidthRequest="85" HeightRequest="50" FontSize="20" Text="+" TextColor="Black" Clicked="ButtonPlus_Clicked" BackgroundColor="White"/>
+        </HorizontalStackLayout>
+
+        <HorizontalStackLayout Grid.Row="7" HorizontalOptions="Center">
+            <Button WidthRequest="85" HeightRequest="50" FontSize="20" Text="+/-" TextColor="Black" BackgroundColor="White"/>
+            <Button WidthRequest="85" HeightRequest="50" FontSize="20" Text="0" TextColor="Black" Clicked="ButtonZero_Clicked" BackgroundColor="White"/>
+            <Button WidthRequest="85" HeightRequest="50" FontSize="20" Text="," TextColor="Black" BackgroundColor="White"/>
+            <Button WidthRequest="85" HeightRequest="50" FontSize="20" Text="=" TextColor="White" BackgroundColor="#2F4F4F" Clicked="ButtonRavno_Clicked"/>
+        </HorizontalStackLayout>
+    </Grid>
+</ContentPage>
